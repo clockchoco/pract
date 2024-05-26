@@ -1,0 +1,23 @@
+.button {
+    background-color: yellow;
+    width:30px;
+    height:30px;
+}
+.selected {
+    color: aqua;
+}
+.localSelected {
+    color: salmon;
+}
+.test1 {
+    color :red;
+}
+.test2 {
+    color:white;
+}
+.active:hover {
+    background-color: beige;
+}
+.active:active {
+    background-color: blue;
+}
