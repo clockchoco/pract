@@ -1,14 +1,18 @@
 import { getFullLaw } from "@/components/getLaw";
+import ParseIndexToClassName from "@/components/parseIndexToClassName";
 import { useEffect, useState } from "react";
 import classes from "./1.module.css"
 function GetLaw(props) {
     const [buttonState, setButtonState] = useState(false);
     const [className, setClassName ] = useState();
     const { data } = props;
-
+    
     const selectedElements = [
         [], ["002", "003"], [], [], []
     ]
+    selectedElements = fetch('/api/user-selected-elements', {
+        body:{}
+    });
     function handleClick() {
         setButtonState(!buttonState);
     }
