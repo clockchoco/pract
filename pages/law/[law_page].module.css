@@ -1,0 +1,107 @@
+/* ./[law_page].module.css */
+
+.selected {
+    color: yellow;
+    font-weight: bold;
+}
+
+.active:hover {
+    background-color: #333333; /* Dark grey background for contrast */
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2); /* 0 4px 8px */
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden; /* Prevent overflow of the entire container */
+    background-color: #000000; /* Black background */
+}
+
+.active:active {
+    background-color: #555555; /* Dark grey for active state */
+    color: #FFFFFF; /* White text */
+}
+
+.mainContent {
+    flex: 1;
+    overflow-y: auto; /* Ensure main content can scroll */
+    padding: 0.5em 1em 1em 4em;
+    transition: margin-left 0.3s ease;
+    color: #FFFFFF; /* White text for dark background */
+    background-color: #222222; /* Very dark grey background */
+}
+
+.mainContent.open {
+    margin-left: 21em; /* 250px */
+}
+
+.mainContent.closed {
+    margin-left: 0em; /* 0px */
+}
+
+
+.law_title {
+    font-size: 2.5em; /* Increase font size for better visibility */
+    font-weight: bold;
+    color: yellow; /* Gold */
+    margin-bottom: 0.5em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Add shadow for better contrast */
+}
+
+.law_article {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #FFFFFF; /* Gold */
+    margin: 1em 0;
+}
+
+/* 항 스타일 */
+.law_paragraph {
+    font-size: 1.3em;
+    font-weight: normal;
+    color: #FFFFFF; /* White */
+    margin: 0.75em 0 0.75em 1em; /* Add indentation for paragraphs */
+}
+
+/* 호 스타일 */
+.law_sub_paragraph {
+    font-size: 1.2em;
+    font-weight: normal;
+    color: #F5F5F5; /* Light grey */
+    margin: 0.5em 0 0.5em 2em; /* Add further indentation for sub-paragraphs */
+}
+
+/* 목 스타일 */
+.law_item {
+    font-size: 1em;
+    font-weight: normal;
+    color: #F5F5F5; /* Closer to white */
+    margin: 0.25em 0 0.25em 3em; /* Add deeper indentation for items */
+}
+
+.active:hover {
+    background-color: #333333; /* Dark grey background for contrast */
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.2); /* 0 4px 8px */
+    transform: scale(1.02);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.active:active {
+    background-color: #555555; /* Dark grey for active state */
+    color: #FFFFFF; /* White text */
+}
+
+.selected {
+    color: yellow; /* Gold */
+    font-weight: bold;
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+
+    .mainContent {
+        padding: 1em;
+    }
+}

@@ -1,11 +1,13 @@
 import "@/styles/globals.css";
-import Header from "@/components/header"
+import { AuthProvider } from '@/components/auth_context'
+
 export default function App({ Component, pageProps }) {
+
   return (
     <>
-      {/* <Header></Header> */}
-      <Component {...pageProps} />
+      <AuthProvider>
+        <Component {...pageProps} />
+      </AuthProvider>
     </>
-  )
-    ;
-}
+  );
+};

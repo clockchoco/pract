@@ -1,0 +1,203 @@
+/* Sidebar.module.css */
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: width 0.3s ease;
+    overflow: hidden;
+    z-index: 1002;
+}
+
+.open {
+    width: 21em; /* 300px */
+}
+
+.closed {
+    width: 0;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.toggleButton {
+    position: fixed;
+    bottom: 1em;
+    left: 1em;
+    height: 2em; /* 2em height */
+    width: 2em; /* 2em width */
+    padding: 1em; /* 1em padding */
+    background-color: #ffcc00;
+    border: none;
+    border-radius: 0.3125em; /* 5px */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    z-index: 1003; /* Ensure it stays above the sidebar */
+}
+
+.toggleButton:hover {
+    background-color: #ffdd33;
+    transform: translateY(-0.125em); /* -2px */
+    box-shadow: 0 0.5em 0.75em rgba(0, 0, 0, 0.2); /* 0 8px 12px */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - 4em); /* Adjust height to account for header */
+    margin-top: 4em; /* Ensure content starts below the toggle button */
+    justify-content: space-between; /* Distribute space evenly */
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2; /* Ensures it takes up 2/3 of the height */
+}
+
+.sidebarItem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 1em;
+    width: 100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, font-size 0.3s ease;
+    flex-shrink: 0; /* Prevent shrinking */
+    font-size: 1.2em; /* Increase font size */
+    font-weight: bold; /* Bold text */
+    height: 3em; /* Fixed height */
+}
+
+.sidebarItem:hover {
+    background-color: #555;
+    font-size: 1.3em; /* Slightly increase font size on hover */
+}
+
+.link {
+    color: white;
+    width: 100%;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    text-decoration: none;
+}
+
+.mypage {
+    color: aqua;
+}
+
+.link:hover {
+    color: #ffcc00;
+}
+
+.userSection {
+    padding: 1.5em;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.2em;
+}
+
+.logoutButton {
+    background-color: #444;
+    color: white;
+    border: none;
+    padding: 0.7em 1.5em;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.logoutButton:hover {
+    background-color: #555;
+}
+
+.loginStatus {
+    white-space: nowrap; /* Prevent line breaks */
+    line-height: 1.2; /* Adjust line height to reduce space between lines */
+}
+.webtitle {
+    font-style: italic; /* Apply italic style */
+    font-family: serif; /* Apply a special font-family */
+    font-weight: bold; /* Make it bold */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    color: #00BFFF; /* Gold color */
+}
+.username {
+    font-size:large; /* Adjust the size as needed */
+    animation: glow 1.5s infinite alternate;
+    font-weight: bold;
+    margin: 0; /* Remove margin */
+    line-height: 1; /* Match line height to the surrounding text */
+}
+
+@keyframes glow {
+    0% { color: #ffcc00; }
+    20% { color: #ff9900; }
+    40% { color: #ff6600; }
+    60% { color: #ff3300; }
+    80% { color: #ff0000; }
+    100% { color: #ffcc00; }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 600px) {
+    .open {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .toggleButton {
+        bottom: 1em;
+        left: 1em;
+        height: 2em;
+        width: 2em;
+        padding: 1em;
+    }
+
+    .button {
+        bottom: 1em;
+        right: 0.7em;
+        padding: 2em;
+    }
+
+    .scrollToTopButton {
+        bottom: 3.2em; /* Position above the existing fixed button */
+        right: 0.3em;
+        padding: 0.6em 0.7em;
+    }
+
+    .mainContent {
+        padding: 1em;
+    }
+
+    .sidebarItem {
+        padding: 0.5em; /* Reduce padding for smaller screens */
+        font-size: 1em; /* Adjust font size for smaller screens */
+        height: 2.5em; /* Adjust height for smaller screens */
+    }
+
+    .header {
+        padding: 0.5em;
+    }
+
+    .logoutButton {
+        padding: 0.5em;
+    }
+
+    .userSection {
+        font-size: 1em;
+    }
+}

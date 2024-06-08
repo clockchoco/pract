@@ -102,8 +102,22 @@ a {
 Link:hover {
   background-color: aqua;
 }
-@media (prefers-color-scheme: dark) {
-  html {
+
+html {
     color-scheme: dark;
-  }
+}
+
+/* styles/globals.css */
+/* styles/globals.css */
+/* styles/globals.css */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: black;
+  height: 100vh;
+  overflow: hidden;
+}
+
+* {
+  box-sizing: border-box;
 }
